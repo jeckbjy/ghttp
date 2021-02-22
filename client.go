@@ -54,6 +54,10 @@ func (c *Client) Post(url string, req interface{}, result interface{}, opts ...O
 	return c.DoRequest(http.MethodPost, url, req, result, opts...)
 }
 
+func (c *Client) Put(url string, req interface{}, result interface{}, opts ...Option) (*Response, error) {
+	return c.DoRequest(http.MethodPut, url, req, result, opts...)
+}
+
 // DoRequest 执行
 func (c *Client) DoRequest(method string, url string, reqBody interface{}, result interface{}, opts ...Option) (*Response, error) {
 	o := &Options{}

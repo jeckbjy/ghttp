@@ -8,6 +8,10 @@ func Post(url string, req interface{}, result interface{}, opts ...Option) (*htt
 	return Default.Post(url, req, result, opts...)
 }
 
+func Put(url string, req interface{}, result interface{}, opts ...Option) (*http.Response, error) {
+	return Default.Put(url, req, result, opts...)
+}
+
 func Get(url string, result interface{}, opts ...Option) (*http.Response, error) {
 	return Default.Get(url, result, opts...)
 }
